@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "users",
     "listings",
     "orders",
-    "messages",
+    "my_messages",
     "reviews",
     "payments",
     "notifications",
