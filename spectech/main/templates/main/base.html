@@ -24,7 +24,7 @@
 
       <!-- Навигация -->
       <nav class="main-nav">
-        <a href="{% url 'index' %}" class="active">Главная</a>
+        <a href="{% url 'main:index' %}" class="active">Главная</a>
         <a href="#">Каталог</a>
         <a href="#">❤ Избранное</a>
         <a href="#">➕️ Разместить</a>
@@ -40,7 +40,7 @@
 
   <!-- Мобильное меню -->
   <nav class="mobile-nav">
-    <a href="{% url 'index' %}" class="active">Главная</a>
+    <a href="{% url 'main:index' %}" class="active">Главная</a>
     <a href="#">Каталог</a>
     <a href="#">❤ Избранное</a>
     <a href="#">+ Разместить</a>
@@ -113,7 +113,7 @@
       </div>
       <div>
         <h4>Информация</h4>
-        <a href="{% url 'about' %}">О нас</a>
+        <a href="{% url 'main:about' %}">О нас</a>
         <p>SpecTrade — площадка для аренды и поиска спецтехники по всей России.</p>
         <p>© <span id="year"></span> SpecTrade</p>
       </div>
