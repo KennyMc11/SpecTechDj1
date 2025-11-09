@@ -11,41 +11,60 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo">
-        <svg width="32" height="32" viewBox="0 0 24 24">
-          <rect width="24" height="24" rx="3" fill="#111" />
-          <path d="M2 18h20v2H2z" fill="#FFD200" />
-          <text x="4" y="16" font-family="sans-serif" font-size="10" fill="#fff">ST</text>
-        </svg>
-        <span class="logo-text">SpecTrade</span>
-      </a>
-
-      <!-- Навигация -->
-      <nav class="main-nav">
-        <a href="{% url 'main:index' %}" class="active">Главная</a>
-        <a href="#">Каталог</a>
-        <a href="#">❤ Избранное</a>
-        <a href="#">➕️ Разместить</a>
-        <div class="main-nav-login">
-          <label for="modal-toggle" style="cursor: pointer;">Вход и регистрация</label>
+  <!-- Шапка для ПК -->
+  <header class="desktop-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-left">
+          <div class="logo">
+            <img src="logo.png" alt="СпецТехника">
+          </div>
+          <nav class="main-nav">
+            <a href="#" class="nav-link">Главная</a>
+            <a href="#" class="nav-link">Каталог</a>
+          </nav>
         </div>
-      </nav>
-
-      <!-- Гамбургер -->
-      <button class="menu-toggle" aria-label="Меню">☰</button>
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="#" class="nav-link"><i class="far fa-heart"></i> Избранное</a>
+            <a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> Корзина</a>
+            <div class="auth-buttons">
+              <label for="modal-toggle" style="cursor: pointer;">Вход и регистрация</label>
+            </div>
+          </nav>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Мобильное меню -->
-  <nav class="mobile-nav">
-    <a href="{% url 'main:index' %}" class="active">Главная</a>
-    <a href="#">Каталог</a>
-    <a href="#">❤ Избранное</a>
-    <a href="#">+ Разместить</a>
-    <label for="modal-toggle" style="cursor: pointer;">Вход и регистрация</label>
-  </nav>
+  <!-- Шапка для мобильных -->
+  <header class="mobile-header">
+    <div class="container">
+      <div class="mobile-top">
+        <div class="logo">
+          <img src="logo.png" alt="СпецТехника">
+        </div>
+        <div class="mobile-search">
+          <input type="text" placeholder="Поиск...">
+        </div>
+        <div class="mobile-cart">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+      <div class="mobile-bottom">
+        <div class="region-selector">
+          <select>
+            <option>Москва</option>
+            <option>СПб</option>
+            <option>Новосибирск</option>
+          </select>
+        </div>
+        <div class="mobile-filters">
+          <button><i class="fas fa-filter"></i> Фильтры</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <main>
     {% block content %}
@@ -103,37 +122,57 @@
   </div>
 
   <!-- Футер -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Помощь</h4>
-        <a href="#">Как разместить объявление</a>
-        <a href="#">Безопасность сделки</a>
-        <a href="#">Частые вопросы</a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>О компании</h4>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Партнерам</a></li>
+            <li><a href="#">Вакансии</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Помощь</h4>
+          <ul>
+            <li><a href="#">Как арендовать</a></li>
+            <li><a href="#">Как сдать в аренду</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+            <li><a href="#">Правила сервиса</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Категории</h4>
+          <ul>
+            <li><a href="#">Экскаваторы</a></li>
+            <li><a href="#">Погрузчики</a></li>
+            <li><a href="#">Краны</a></li>
+            <li><a href="#">Бульдозеры</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+            <li><i class="fas fa-envelope"></i> info@spectechnika.ru</li>
+            <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Строителей, 15</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4>Информация</h4>
-        <a href="{% url 'main:about' %}">О нас</a>
-        <p>SpecTrade — площадка для аренды и поиска спецтехники по всей России.</p>
-        <p>© <span id="year"></span> SpecTrade</p>
-      </div>
-      <div>
-        <h4>Контакты</h4>
-        <p>support@spectrade.example</p>
-        <p>+7 (800) 555-35-35</p>
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2023 СпецТехника. Все права защищены.
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-vk"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </div>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.mobile-nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-  </script>
 </body>
 
 </html>

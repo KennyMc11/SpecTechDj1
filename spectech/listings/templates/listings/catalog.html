@@ -1,37 +1,12 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}Главня страница{% endblock %}
+{% block title %}Каталог{% endblock %}
 
 {% block content %}
 <!-- Основной контент -->
 <main class="main-content">
     <div class="container">
-        <div class="header-bottom">
-            <div class="categories-dropdown">
-                <select>
-                    <option>Все категории</option>
-                    <option>Экскаваторы</option>
-                    <option>Погрузчики</option>
-                    <option>Краны</option>
-                    <option>Бульдозеры</option>
-                    <option>Самосвалы</option>
-                </select>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Поиск техники...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <div class="region-selector">
-                <select>
-                    <option>Москва</option>
-                    <option>Санкт-Петербург</option>
-                    <option>Новосибирск</option>
-                    <option>Екатеринбург</option>
-                    <option>Казань</option>
-                </select>
-            </div>
-        </div>
         <!-- Быстрые фильтры для мобильных -->
         <div class="mobile-quick-filters">
             <button>Экскаваторы</button>
