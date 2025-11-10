@@ -22,6 +22,6 @@ app_name = 'listings'
 
 
 urlpatterns = [
-    path("", views.catalog, name='catalog'),
     path("offer", views.offer, name='offer'),
+    path("catalog", views.catalog, name='catalog'),
 ]

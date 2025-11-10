@@ -58,89 +58,71 @@
                 <option>По рейтингу</option>
             </select>
         </div>
-
+        <div class="categories-grid">
+            <div class="category-tile" title="Экскаваторы">
+                <span class="article">Экскаваторы</span>
+                <img src="{% static 'main/img/excavator.jpg' %}" alt="Экскаваторы">
+            </div>
+            <div class="category-tile1" title="Погрузчики">
+                <span class="article">Погрузчики</span>
+                <img src="{% static 'main/img/pogruzchik.jpg' %}" alt="Погрузчики">
+            </div>
+            <div class="category-tile1" title="Бульдозеры">
+                <span class="article">Бульдозеры</span>
+                <img src="{% static 'main/img/buldozer.jpg' %}" alt="Бульдозеры">
+            </div>
+            <div class="category-tile" title="Краны">
+                <span class="article">Краны</span>
+                <img src="{% static 'main/img/avtokran.png' %}" alt="Краны">
+            </div>
+            <div class="category-tile1" title="Бульдозеры">
+                <span class="article">Бульдозеры</span>
+                <img src="{% static 'main/img/buldozer.jpg' %}" alt="Бульдозеры">
+            </div>
+            <div class="category-tile1" title="Бульдозеры">
+                <span class="article">Бульдозеры</span>
+                <img src="{% static 'main/img/buldozer.jpg' %}" alt="Бульдозеры">
+            </div>
+            <div class="category-tile" title="Самосвалы">
+                <span class="article">Самосвалы</span>
+                <img src="{% static 'main/img/samosval.png' %}" alt="Самосвалы">
+            </div>
+        </div>
+        <div class="categories-grid">
+            <div class="category-tile1" title="Тракторы">
+                <span class="article">Тракторы</span>
+                <img src="{% static 'main/img/tractor.png' %}" alt="Тракторы">
+            </div>
+            <div class="category-tile1" title="Катки">
+                <span class="article">Катки</span>
+                <img src="{% static 'main/img/katok.png' %}" alt="Катки">
+            </div>
+            <div class="category-tile1" title="Катки">
+                <span class="article">Катки</span>
+                <img src="{% static 'main/img/katok.png' %}" alt="Катки">
+            </div>
+            <div class="category-tile1" title="Погрузчики">
+                <span class="article">Погрузчики</span>
+                <img src="{% static 'main/img/pogruzchik.jpg' %}" alt="Погрузчики">
+            </div>
+            <div class="category-tile" title="Самосвалы">
+                <span class="article">Самосвалы</span>
+                <img src="{% static 'main/img/samosval.png' %}" alt="Самосвалы">
+            </div>
+            <div class="category-tile" title="Бетоносмесители">
+                <span class="article">Бетоносмесители</span>
+                <img src="{% static 'main/img/betonosmesitel.jpg' %}" alt="Бетоносмесители">
+            </div>
+            <div class="category-tile" title="Катки">
+                <span class="article">Катки</span>
+                <img src="{% static 'main/img/katok.png' %}" alt="Катки">
+            </div>
+        </div>
+        <li></li>
+        <li></li>
         <div class="content-wrapper">
-            <!-- Боковая панель с фильтрами (для ПК) -->
-            <aside class="filters-sidebar">
-                <h3>Фильтры</h3>
-                <div class="filter-group">
-                    <h4>Стоимость</h4>
-                    <div class="price-range">
-                        <input type="number" placeholder="От">
-                        <span>-</span>
-                        <input type="number" placeholder="До">
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        С НДС
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        С доставкой
-                    </label>
-                </div>
-                <div class="filter-group">
-                    <h4>Оператор</h4>
-                    <div class="radio-group">
-                        <label class="radio">
-                            <input type="radio" name="operator" checked>
-                            <span class="radiomark"></span>
-                            Да
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="operator">
-                            <span class="radiomark"></span>
-                            Нет
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="operator">
-                            <span class="radiomark"></span>
-                            Неважно
-                        </label>
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <h4>Срок аренды</h4>
-                    <div class="rent-range">
-                        <input type="number" placeholder="От">
-                        <span>-</span>
-                        <input type="number" placeholder="До">
-                        <span>часов</span>
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <h4>Слова в описании</h4>
-                    <input type="text" placeholder="Ключевые слова">
-                </div>
-                <div class="filter-group">
-                    <h4>Часто ищут</h4>
-                    <div class="popular-searches">
-                        <a href="#">Экскаватор-погрузчик JCB</a>
-                        <a href="#">Мини-погрузчик</a>
-                        <a href="#">Автокран 25 тонн</a>
-                        <a href="#">Бульдозер Б10</a>
-                        <a href="#">Фронтальный погрузчик</a>
-                    </div>
-                </div>
-            </aside>
-
             <!-- Основной контент с объявлениями -->
             <section class="ads-section">
-                <!-- Сортировка для ПК -->
-                <div class="sort-bar">
-                    <span>Сортировать:</span>
-                    <select>
-                        <option>Сначала дешевле</option>
-                        <option>Сначала дороже</option>
-                        <option>По дате</option>
-                        <option>По рейтингу</option>
-                    </select>
-                </div>
-
                 <!-- Плитки с объявлениями -->
                 <div class="ads-grid">
                     <!-- Объявление 1 -->

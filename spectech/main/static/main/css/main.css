@@ -66,224 +66,6 @@ body {
   border-radius: 12px;
 }
 
-.logo {
-  margin-right: auto;
-  /* Прижимает все что справа к правому краю */
-}
-
-.main-nav {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--light);
-  font-weight: 500;
-  transition: color 0.3s;
-  padding: 2px 0 4px 0;
-  height: 100%;
-}
-
-.nav-link:hover {
-  color: var(--primary);
-}
-
-.nav-link2 {
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-  padding: 0px 0px; /* Увеличили вертикальные отступы, уменьшили горизонтальные */
-  height: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px; /* Увеличили размер иконок */
-  margin: -4px -11px; /* Сдвигаем ближе друг к другу */
-}
-
-.nav-link2:hover {
-  color: var(--primary);
-}
-
-.nav-link1 {
-  display: inline-flex;
-  padding: 0px 10px 4px;
-  border: 2px solid var(--primary);
-  border-radius: 8px;
-  color: var(--light);
-  background-color: transparent;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  height: 100%;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-.nav-link1:hover {
-  background-color: var(--primary);
-  color: var(--dark);
-}
-
-.auth-buttons label {
-  text-decoration: none;
-  color: var(--light);
-  font-weight: 500;
-  transition: color 0.3s;
-  padding: 0 0 0 0;
-  height: 100%;
-  cursor: pointer;
-  position: relative;
-  top: 2px;
-}
-
-.auth-buttons label:hover {
-  color: var(--primary);
-}
-
-.header-bottom {
-  display: flex;
-  gap: 5px;
-}
-
-.categories-dropdown{
-  flex: 0 1 155px;
-  min-width: 120px;
-  height: 42px;
-}
-
-.categories-dropdown select {
-  width: 100%;
-  height: 100%;
-  padding: 0px 12px 0px 32px;
-  border: 2px solid var(--primary); /* Желтая рамка */
-  border-radius: 12px; /* Скругленные углы */
-  background: var(--primary); /* Желтый фон */
-  color: var(--dark); /* Темный текст */
-  font-size: 16px;
-  font-weight: 500;
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  appearance: none; /* Убирает стандартный стиль браузера */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-/* Добавляем кастомную стрелку */
-.categories-dropdown {
-  position: relative;
-}
-
-.categories-dropdown::after {
-  content: "☰";
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--dark);
-  font-size: 18px;
-  pointer-events: none;
-}
-
-/* Состояния при наведении и фокусе */
-.categories-dropdown select:hover {
-  background: #ffd633; /* Более светлый желтый */
-  border-color: #ffd633;
-}
-
-.categories-dropdown select:focus {
-  outline: none;
-  background: var(--white); /* фон при фокусе */
-  border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3); /* Свечение */
-}
-
-.search-box {
-  flex: auto;
-  display: flex;
-  height: 42px;
-  border: 2px solid var(--primary);
-  border-radius: 12px;
-  background-color: var(--primary);
-}
-
-.search-box input {
-  flex: 0 1 700px;
-  min-width: 150px;
-  padding: 6px 15px;
-  border: 0.5px solid var(--primary);
-  border-right: none; /* Убираем правую границу чтобы слиться с кнопкой */
-  border-radius: 12px; 
-  background: var(--light);
-  color: var(--dark);
-  font-size: 13px;
-  font-weight: 500;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-.search-box input::placeholder {
-  color: var(--dark);
-  opacity: 0.7;
-}
-
-.search-box input:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3);
-  background: var(--white); /* Белый фон при фокусе для удобства чтения */
-  color: var(--dark);
-}
-
-.search-box button {
-  padding: 0 15px;
-  background: var(--primary);
-  border: 2px solid var(--primary);
-  border-left: none; /* Убираем левую границу */
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.search-box button:hover {
-  background: #ffd633; /* Более светлый желтый при наведении */
-  border-color: #ffd633;
-}
-
-.search-box button svg {
-  width: 16px;
-  height: 16px;
-  transform: translate(0px, 1px);
-}
-
-.Region {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: 8px 0 0 0;
-  display: inline-block;
-  padding-right: 25px;
-}
-
-.Region:hover {
-  color: var(--primary);
-}
-
-.Region svg {
-  width: 18px;
-  height: 14px;
-  flex-shrink: 0;
-  margin-right: 0px;
-  transform: translate(6px, 1px); /* X, Y */
-}
-
 /* Шапка для мобильных */
 .mobile-header {
   display: none;
@@ -332,6 +114,328 @@ body {
 
 .mobile-filters {
   display: block !important;
+}
+
+.logo {
+  margin-right: auto;
+  /* Прижимает все что справа к правому краю */
+}
+
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--light);
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 2px 0 4px 0;
+  height: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link2 {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0px 0px;
+  /* Увеличили вертикальные отступы, уменьшили горизонтальные */
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  /* Увеличили размер иконок */
+  margin: -4px -11px;
+  /* Сдвигаем ближе друг к другу */
+}
+
+.nav-link2:hover {
+  color: var(--primary);
+}
+
+.nav-link1 {
+  display: inline-flex;
+  padding: 0px 10px 4px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  color: var(--light);
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.nav-link1:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+.auth-buttons label {
+  text-decoration: none;
+  color: var(--light);
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0 0 0 0;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+
+.auth-buttons label:hover {
+  color: var(--primary);
+}
+
+.header-bottom {
+  display: flex;
+  gap: 5px;
+}
+
+.categories-dropdown {
+  flex: 0 1 155px;
+  min-width: 120px;
+  height: 42px;
+}
+
+.categories-dropdown select {
+  width: 100%;
+  height: 100%;
+  padding: 0px 12px 0px 32px;
+  border: 2px solid var(--primary);
+  /* Желтая рамка */
+  border-radius: 12px;
+  /* Скругленные углы */
+  background: var(--primary);
+  /* Желтый фон */
+  color: var(--dark);
+  /* Темный текст */
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  /* Убирает стандартный стиль браузера */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Добавляем кастомную стрелку */
+.categories-dropdown {
+  position: relative;
+}
+
+.categories-dropdown::after {
+  content: "☰";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+/* Состояния при наведении и фокусе */
+.categories-dropdown select:hover {
+  background: #ffd633;
+  /* Более светлый желтый */
+  border-color: #ffd633;
+}
+
+.categories-dropdown select:focus {
+  outline: none;
+  background: var(--white);
+  /* фон при фокусе */
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3);
+  /* Свечение */
+}
+
+.search-box {
+  flex: auto;
+  display: flex;
+  height: 42px;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  background-color: var(--primary);
+}
+
+.search-box input {
+  flex: 0 1 700px;
+  min-width: 150px;
+  padding: 6px 15px;
+  border: 0.5px solid var(--primary);
+  border-right: none;
+  /* Убираем правую границу чтобы слиться с кнопкой */
+  border-radius: 12px;
+  background: var(--light);
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+  color: var(--dark);
+  opacity: 0.7;
+}
+
+.search-box input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3);
+  background: var(--white);
+  /* Белый фон при фокусе для удобства чтения */
+  color: var(--dark);
+}
+
+.search-box button {
+  padding: 0 15px;
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-left: none;
+  /* Убираем левую границу */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.search-box button:hover {
+  background: #ffd633;
+  /* Более светлый желтый при наведении */
+  border-color: #ffd633;
+}
+
+.search-box button svg {
+  width: 16px;
+  height: 16px;
+  transform: translate(0px, 1px);
+}
+
+.Region {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 0 0 0;
+  display: inline-block;
+  padding-right: 25px;
+}
+
+.Region:hover {
+  color: var(--primary);
+}
+
+.Region svg {
+  width: 18px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-right: 0px;
+  transform: translate(6px, 1px);
+  /* X, Y */
+}
+
+/* Плитки с категориями */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+
+.category-tile {
+  position: relative;
+  background: var(--white);
+  border: 0px solid var(--primary);
+  border-radius: 12px;
+  padding: 0px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2;
+  /* Квадратные плитки */
+  box-shadow: 0 0.5px 1px rgba(117, 117, 117, 0.4);
+}
+
+.category-tile1 {
+  position: relative;
+  background: var(--white);
+  border: 0px solid var(--primary);
+  border-radius: 12px;
+  padding: 0px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1.3;
+  /* Квадратные плитки */
+  box-shadow: 0 0.5px 1px rgba(117, 117, 117, 0.4);
+}
+
+.category-tile:hover {
+  transform: scale(1.003);
+  box-shadow: 0 2px 8px rgba(117, 117, 117, 0.4);
+  background: var(--white);
+}
+
+.category-tile1:hover {
+  transform: scale(1.003);
+  box-shadow: 0 2px 8px rgba(117, 117, 117, 0.4);
+  background: var(--white);
+}
+
+.category-tile img {
+  width: 180px;
+  height: 90px;
+  object-fit: contain;
+  z-index: 1;
+  /* Ниже артикля */
+  border-radius: 12px;
+}
+
+.category-tile1 img {
+  width: 117px;
+  height: 90px;
+  object-fit: cover;
+  z-index: 1;
+  /* Ниже артикля */
+  border-radius: 12px;
+}
+
+.article {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  /* Теперь слева */
+  font-size: 14px;
+  color: var(--dark);
+  background: rgba(255, 255, 255, 0.634);
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 500;
+  border: 0px solid #ffffff00;
+  z-index: 3;
+  /* Выше картинки и текста */
 }
 
 /* Быстрые фильтры для мобильных */
