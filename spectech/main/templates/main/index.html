@@ -8,6 +8,9 @@
 <main class="main-content">
     <div class="container">
         <div class="header-bottom">
+            <div class="logo">
+                <img src="{% static 'main/img/JCB-Logo.jpg' %}" alt="СпецТехника">
+            </div>
             <div class="categories-dropdown">
                 <select>
                     <option>Все категории</option>
@@ -20,17 +23,22 @@
             </div>
             <div class="search-box">
                 <input type="text" placeholder="Поиск техники...">
-                <button><i class="fas fa-search"></i></button>
+                <button>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                    Найти
+                </button>
             </div>
-            <div class="region-selector">
-                <select>
-                    <option>Москва</option>
-                    <option>Санкт-Петербург</option>
-                    <option>Новосибирск</option>
-                    <option>Екатеринбург</option>
-                    <option>Казань</option>
-                </select>
-            </div>
+            <a href="#" class="Region">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path
+                        d="M480-317.26q96.85-77.13 144.84-147.54 47.99-70.42 47.99-134.94 0-86.41-53.97-141.9-53.97-55.49-138.86-55.49-84.89 0-138.86 55.49-53.97 55.49-53.97 141.9 0 64.52 47.99 134.94Q383.15-394.39 480-317.26Zm0 114.63q-144.59-104.96-214.21-202.6t-69.62-194.51q0-126.19 79.2-207.29T480-888.13q125.43 0 204.63 81.1 79.2 81.1 79.2 207.29 0 96.87-69.62 194.51-69.62 97.64-214.21 202.6Zm0-316.89q35.15 0 59.97-24.82 24.81-24.81 24.81-59.96 0-35.16-24.81-59.97-24.82-24.82-59.97-24.82t-59.97 24.82q-24.81 24.81-24.81 59.97 0 35.15 24.81 59.96 24.82 24.82 59.97 24.82ZM191.87-71.87v-90.76h576.26v90.76H191.87ZM480-604.3Z" />
+                </svg>
+                <span>Санкт-Петербург</span>
+            </a>
         </div>
         <!-- Быстрые фильтры для мобильных -->
         <div class="mobile-quick-filters">
