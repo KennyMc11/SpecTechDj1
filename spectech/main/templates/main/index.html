@@ -164,28 +164,30 @@
         <h2 class="listings-title">Рекомендации для вас</h2>
         <div class="listings-grid">
             <!-- Плитка 1 -->
-            <div class="listing-card">
+            <div class="listing-card" data-id="1">
                 <div class="listing-image">
                     <img src="{% static 'main/img/Pogruzchik JCB.jpeg' %}" alt="Экскаватор JCB">
                 </div>
                 <div class="listing-info">
                     <div class="listing-header">
                         <h3 class="listing-title-1">Экскаватор JCB 3CX</h3>
-                        <button class="favorite-btn-small"><svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                        <button class="favorite-btn-small">
+                            <svg width="26" height="24" viewBox="0 0 22 20" fill="none">
                                 <path
-                                    d="M11 19L9.55 17.65C4.4 13.15 1 10.15 1 6.5C1 3.75 3.25 1.5 6 1.5C7.65 1.5 9.25 2.3 10 3.55C10.75 2.3 12.35 1.5 14 1.5C16.75 1.5 19 3.75 19 6.5C19 10.15 15.6 13.15 10.45 17.65L11 19Z"
-                                    fill="currentColor" stroke="black" stroke-width="1.5" />
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
                             </svg>
                         </button>
                     </div>
                     <p class="listing-specs">Ковш 1.5м³ • 2022 г.в.</p>
                     <div class="listing-price">2 500 ₽/час</div>
-                    <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Москва, ЦАО</div>
+                    <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Москва, ЦАО, Рублевское шоссе</div>
+                    <button class="book-btn">Забронировать</button>
                 </div>
             </div>
 
             <!-- Плитка 2 -->
-            <div class="listing-card">
+            <div class="listing-card" data-id="1">
                 <div class="listing-image">
                     <img src="{% static 'main/img/Volvo-L150E.jpg' %}" alt="Погрузчик Volvo">
                     <button class="favorite-btn"><i class="far fa-heart"></i></button>
@@ -193,42 +195,44 @@
                 <div class="listing-info">
                     <div class="listing-header">
                         <h3 class="listing-title-1">Погрузчик Volvo L120H</h3>
-                        <button class="favorite-btn-small"><svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
                                 <path
-                                    d="M11 19L9.55 17.65C4.4 13.15 1 10.15 1 6.5C1 3.75 3.25 1.5 6 1.5C7.65 1.5 9.25 2.3 10 3.55C10.75 2.3 12.35 1.5 14 1.5C16.75 1.5 19 3.75 19 6.5C19 10.15 15.6 13.15 10.45 17.65L11 19Z"
-                                    fill="currentColor" stroke="black" stroke-width="1.5" />
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
                             </svg>
                         </button>
                     </div>
                     <p class="listing-specs">Грузопод. 3.5т • 2021 г.в.</p>
                     <div class="listing-price">3 800 ₽/час</div>
                     <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Московская обл.</div>
+                    <button class="book-btn">Забронировать</button>
                 </div>
             </div>
 
             <!-- Плитка 3 -->
-            <div class="listing-card">
+            <div class="listing-card" data-id="1">
                 <div class="listing-image">
                     <img src="{% static 'main/img/Pogruzchik JCB.jpeg' %}" alt="Экскаватор JCB">
                 </div>
                 <div class="listing-info">
                     <div class="listing-header">
                         <h3 class="listing-title-1">Экскаватор JCB 3CX</h3>
-                        <button class="favorite-btn-small"><svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
                                 <path
-                                    d="M11 19L9.55 17.65C4.4 13.15 1 10.15 1 6.5C1 3.75 3.25 1.5 6 1.5C7.65 1.5 9.25 2.3 10 3.55C10.75 2.3 12.35 1.5 14 1.5C16.75 1.5 19 3.75 19 6.5C19 10.15 15.6 13.15 10.45 17.65L11 19Z"
-                                    fill="currentColor" stroke="black" stroke-width="1.5" />
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
                             </svg>
                         </button>
                     </div>
                     <p class="listing-specs">Ковш 1.5м³ • 2022 г.в.</p>
                     <div class="listing-price">2 500 ₽/час</div>
                     <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Москва, ЦАО</div>
+                    <button class="book-btn">Забронировать</button>
                 </div>
             </div>
 
             <!-- Плитка 4 -->
-            <div class="listing-card">
+            <div class="listing-card" data-id="1">
                 <div class="listing-image">
                     <img src="{% static 'main/img/Volvo-L150E.jpg' %}" alt="Погрузчик Volvo">
                     <button class="favorite-btn"><i class="far fa-heart"></i></button>
@@ -236,16 +240,106 @@
                 <div class="listing-info">
                     <div class="listing-header">
                         <h3 class="listing-title-1">Погрузчик Volvo L120H</h3>
-                        <button class="favorite-btn-small"><svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
                                 <path
-                                    d="M11 19L9.55 17.65C4.4 13.15 1 10.15 1 6.5C1 3.75 3.25 1.5 6 1.5C7.65 1.5 9.25 2.3 10 3.55C10.75 2.3 12.35 1.5 14 1.5C16.75 1.5 19 3.75 19 6.5C19 10.15 15.6 13.15 10.45 17.65L11 19Z"
-                                    fill="currentColor" stroke="black" stroke-width="1.5" />
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
                             </svg>
                         </button>
                     </div>
                     <p class="listing-specs">Грузопод. 3.5т • 2021 г.в.</p>
                     <div class="listing-price">3 800 ₽/час</div>
                     <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Московская обл.</div>
+                    <button class="book-btn">Забронировать</button>
+                </div>
+            </div>
+            <!-- Плитка 5 -->
+            <div class="listing-card" data-id="1">
+                <div class="listing-image">
+                    <img src="{% static 'main/img/Pogruzchik JCB.jpeg' %}" alt="Экскаватор JCB">
+                </div>
+                <div class="listing-info">
+                    <div class="listing-header">
+                        <h3 class="listing-title-1">Экскаватор JCB 3CX</h3>
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
+                                <path
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="listing-specs">Ковш 1.5м³ • 2022 г.в.</p>
+                    <div class="listing-price">2 500 ₽/час</div>
+                    <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Москва, ЦАО</div>
+                    <button class="book-btn">Забронировать</button>
+                </div>
+            </div>
+
+            <!-- Плитка 6 -->
+            <div class="listing-card" data-id="1">
+                <div class="listing-image">
+                    <img src="{% static 'main/img/Volvo-L150E.jpg' %}" alt="Погрузчик Volvo">
+                    <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="listing-info">
+                    <div class="listing-header">
+                        <h3 class="listing-title-1">Погрузчик Volvo L120H</h3>
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
+                                <path
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="listing-specs">Грузопод. 3.5т • 2021 г.в.</p>
+                    <div class="listing-price">3 800 ₽/час</div>
+                    <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Московская обл.</div>
+                    <button class="book-btn">Забронировать</button>
+                </div>
+            </div>
+
+            <!-- Плитка 7 -->
+            <div class="listing-card" data-id="1">
+                <div class="listing-image">
+                    <img src="{% static 'main/img/Pogruzchik JCB.jpeg' %}" alt="Экскаватор JCB">
+                </div>
+                <div class="listing-info">
+                    <div class="listing-header">
+                        <h3 class="listing-title-1">Экскаватор JCB 3CX</h3>
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
+                                <path
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="listing-specs">Ковш 1.5м³ • 2022 г.в.</p>
+                    <div class="listing-price">2 500 ₽/час</div>
+                    <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Москва, ЦАО</div>
+                    <button class="book-btn">Забронировать</button>
+                </div>
+            </div>
+
+            <!-- Плитка 8 -->
+            <div class="listing-card" data-id="1">
+                <div class="listing-image">
+                    <img src="{% static 'main/img/Volvo-L150E.jpg' %}" alt="Погрузчик Volvo">
+                    <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="listing-info">
+                    <div class="listing-header">
+                        <h3 class="listing-title-1">Погрузчик Volvo L120H</h3>
+                        <button class="favorite-btn-small"><svg width="26" height="24" viewBox="0 0 22 20" fill="none">
+                                <path
+                                    d="M9.98204 16.867L3.28133 10.1643C1.69523 8.57776 1.69534 6.00549 3.28133 4.41902C4.86733 2.83255 7.43879 2.83252 9.02478 4.41902L9.98204 5.37656L10.9393 4.41902C12.5253 2.83255 15.0968 2.83252 16.6829 4.41902C18.2688 6.00553 18.2688 8.5778 16.6829 10.1643L9.98204 16.867Z"
+                                    fill="currentColor" stroke="black" stroke-width="2.1" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="listing-specs">Грузопод. 3.5т • 2021 г.в.</p>
+                    <div class="listing-price">3 800 ₽/час</div>
+                    <div class="listing-location"><i class="fas fa-map-marker-alt"></i> Московская обл.</div>
+                    <button class="book-btn">Забронировать</button>
                 </div>
             </div>
 
