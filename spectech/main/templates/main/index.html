@@ -11,15 +11,16 @@
             <div class="logo">
                 <img src="{% static 'main/img/JCB-Logo.jpg' %}" alt="СпецТехника">
             </div>
-            <div class="categories-dropdown">
-                <select>
-                    <option>Все категории</option>
-                    <option>Экскаваторы</option>
-                    <option>Погрузчики</option>
-                    <option>Краны</option>
-                    <option>Бульдозеры</option>
-                    <option>Самосвалы</option>
-                </select>
+            <div class="custom-select">
+                <div class="custom-select__trigger">
+                    <span class="selected-text">Все категории</span>
+                    <div class="arrow">☰</div>
+                </div>
+                <div class="custom-options">
+                    <div class="custom-option selected" data-value="all">Все категории</div>
+                    <div class="custom-option" data-value="excavators">Экскаваторы</div>
+                    <div class="custom-option" data-value="loaders">Погрузчики</div>
+                </div>
             </div>
             <div class="search-box">
                 <input type="text" placeholder="Поиск техники...">

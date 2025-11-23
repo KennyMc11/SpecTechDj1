@@ -11,15 +11,21 @@
             <div class="logo">
                 <img src="{% static 'main/img/JCB-Logo.jpg' %}" alt="СпецТехника">
             </div>
-            <div class="categories-dropdown">
-                <select>
+            <div class="custom-select">
+                <select class="native-select">
                     <option>Все категории</option>
                     <option>Экскаваторы</option>
                     <option>Погрузчики</option>
-                    <option>Краны</option>
-                    <option>Бульдозеры</option>
-                    <option>Самосвалы</option>
                 </select>
+                <div class="custom-select__trigger">
+                    <span class="selected-text">Все категории</span>
+                    <div class="arrow">☰</div>
+                </div>
+                <div class="custom-options">
+                    <div class="custom-option selected" data-value="all">Все категории</div>
+                    <div class="custom-option" data-value="excavators">Экскаваторы</div>
+                    <div class="custom-option" data-value="loaders">Погрузчики</div>
+                </div>
             </div>
             <div class="search-box">
                 <input type="text" placeholder="Поиск техники...">
@@ -132,15 +138,23 @@
             <section class="ads-section">
                 <!-- Сортировка для ПК -->
                 <div class="sort-bar">
-                    <span>Сортировать:</span>
-                    <select>
-                        <option>Сначала дешевле</option>
-                        <option>Сначала дороже</option>
-                        <option>По дате</option>
-                        <option>По рейтингу</option>
-                    </select>
+                    <div class="custom-select sort-select">
+                        <select class="native-select">
+                            <option value="default">По умолчанию</option>
+                            <option value="cheap">Сначала дешевле</option>
+                            <option value="expensive">Сначала дороже</option>
+                        </select>
+                        <div class="custom-select__trigger">
+                            <div class="arrow">⇄</div>
+                            <span class="selected-text">Сортировка</span>
+                        </div>
+                        <div class="custom-options">
+                            <div class="custom-option" data-value="default">По умолчанию</div>
+                            <div class="custom-option" data-value="cheap">Сначала дешевле</div>
+                            <div class="custom-option" data-value="expensive">Сначала дороже</div>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- Плитки с объявлениями -->
                 <div class="ads-grid">
                     <!-- Объявление 1 -->
