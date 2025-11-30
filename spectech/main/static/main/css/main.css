@@ -197,7 +197,7 @@ body {
 
 .header-bottom {
   display: flex;
-  gap: 5px;
+  gap: 8px;
 }
 
 .categories-dropdown {
@@ -702,11 +702,20 @@ body {
 
 .content-wrapper {
   display: flex;
-  gap: 20px;
-  padding-top: 10px;
+  gap: 10px;
+  padding-top: 0px;
 }
 
 /* Боковая панель с фильтрами */
+.filters-section h3 {
+  margin-bottom: 6px;
+  margin-top: 6px;
+  color: var(--dark);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 3px;
+  padding-left: 18px;
+}
+
 .filters-sidebar {
   flex: 0 0 280px;
   background: var(--white);
@@ -714,17 +723,11 @@ body {
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   height: fit-content;
-  max-width: 295px;
+  max-width: 297px;
+  min-width: 297px;
   position: sticky;
   top: 20px;
   align-self: flex-start;
-}
-
-.filters-sidebar h3 {
-  margin-bottom: 20px;
-  color: var(--dark);
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 8px;
 }
 
 .filter-group {
@@ -734,6 +737,10 @@ body {
 .filter-group h4 {
   margin-bottom: 5px;
   font-size: 16px;
+}
+
+.filter-group label{
+  font-size: 14px;
 }
 
 .price-range,
@@ -753,7 +760,19 @@ body {
   font-size: 12px;
   transition: all 0.3s ease;
   outline: none;
-  max-width: 125px;
+  max-width: 120px;
+}
+
+.keywords input {
+  flex: 1;
+  padding: 6px 6px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: var(--white);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+  min-width: 255px;
 }
 
 .checkbox,
@@ -770,10 +789,27 @@ body {
   margin-right: 8px;
 }
 
+.btn_apply_filter{
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 255px;
+  margin-bottom: 30px;
+}
+
+.btn_apply_filter:hover {
+  background-color: #e0e0e0;
+}
+
 .popular-searches {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0px;
 }
 
 .popular-searches a {
@@ -862,22 +898,22 @@ body {
 .ads-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 /* Карточка длинного объявления */
 .ad-card {
   display: flex;
   background: var(--white);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .ad-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .ad-left {

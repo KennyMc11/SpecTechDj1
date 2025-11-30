@@ -64,75 +64,80 @@
                 <option>По рейтингу</option>
             </select>
         </div>
-
         <div class="content-wrapper">
             <!-- Боковая панель с фильтрами (для ПК) -->
-            <aside class="filters-sidebar">
+            <section class="filters-section">
                 <h3>Фильтры</h3>
-                <div class="filter-group">
-                    <h4>Стоимость</h4>
-                    <div class="price-range">
-                        <input type="number" placeholder="От">
-                        <span>-</span>
-                        <input type="number" placeholder="До">
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h4>Стоимость</h4>
+                        <div class="price-range">
+                            <input type="number" placeholder="От">
+                            <span>-</span>
+                            <input type="number" placeholder="До">
+                        </div>
                     </div>
-                </div>
-                <div class="filter-group">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        С НДС
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        С доставкой
-                    </label>
-                </div>
-                <div class="filter-group">
-                    <h4>Оператор</h4>
-                    <div class="radio-group">
-                        <label class="radio">
-                            <input type="radio" name="operator" checked>
-                            <span class="radiomark"></span>
-                            Да
+                    <div class="filter-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            С НДС
                         </label>
-                        <label class="radio">
-                            <input type="radio" name="operator">
-                            <span class="radiomark"></span>
-                            Нет
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="operator">
-                            <span class="radiomark"></span>
-                            Неважно
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            С доставкой
                         </label>
                     </div>
-                </div>
-                <div class="filter-group">
-                    <h4>Срок аренды</h4>
-                    <div class="rent-range">
-                        <input type="number" placeholder="От">
-                        <span>-</span>
-                        <input type="number" placeholder="До">
-                        <span>часов</span>
+                    <div class="filter-group">
+                        <h4>Оператор</h4>
+                        <div class="radio-group">
+                            <label class="radio">
+                                <input type="radio" name="operator" checked>
+                                <span class="radiomark"></span>
+                                Да
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="operator">
+                                <span class="radiomark"></span>
+                                Нет
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="operator">
+                                <span class="radiomark"></span>
+                                Неважно
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="filter-group">
-                    <h4>Слова в описании</h4>
-                    <input type="text" placeholder="Ключевые слова">
-                </div>
-                <div class="filter-group">
-                    <h4>Часто ищут</h4>
-                    <div class="popular-searches">
-                        <a href="#">Экскаватор-погрузчик JCB</a>
-                        <a href="#">Мини-погрузчик</a>
-                        <a href="#">Автокран 25 тонн</a>
-                        <a href="#">Бульдозер Б10</a>
-                        <a href="#">Фронтальный погрузчик</a>
+                    <div class="filter-group">
+                        <h4>Срок аренды(часов)</h4>
+                        <div class="rent-range">
+                            <input type="number" placeholder="От">
+                            <span>-</span>
+                            <input type="number" placeholder="До">
+                        </div>
                     </div>
-                </div>
-            </aside>
+                    <div class="filter-group">
+                        <h4>Слова в описании</h4>
+                        <div class="keywords">
+                            <input type="text" placeholder="Ключевые слова">
+                        </div>
+                    </div>
+                    <div class="apply_filter">
+                        <button class="btn_apply_filter">Применить фильтры</button>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Часто ищут</h4>
+                        <div class="popular-searches">
+                            <a href="#">Экскаватор-погрузчик JCB</a>
+                            <a href="#">Мини-погрузчик</a>
+                            <a href="#">Автокран 25 тонн</a>
+                            <a href="#">Бульдозер Б10</a>
+                            <a href="#">Фронтальный погрузчик</a>
+                        </div>
+                    </div>
+                </aside>
+            </section>
 
             <!-- Основной контент с объявлениями -->
             <section class="ads-section">
