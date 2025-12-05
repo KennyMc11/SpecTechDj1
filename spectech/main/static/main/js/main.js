@@ -115,3 +115,19 @@ function createStars(ratingElement) {
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.listing-rating').forEach(createStars);
 });
+
+
+
+// Заливка Для маленьких сердечек
+document.querySelectorAll('.favorite-btn-small').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        
+        // Анимация
+        this.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            this.style.transform = 'scale(1)';
+        }, 300);
+    });
+});

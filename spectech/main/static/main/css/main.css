@@ -276,7 +276,7 @@ body {
 }
 
 .custom-option {
-  padding: 10px 15px;
+  padding: 3px 15px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -1053,20 +1053,6 @@ body {
   background: #004a94;
 }
 
-.btn-favorite {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 18px;
-  color: var(--gray);
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.btn-favorite:hover {
-  color: var(--primary);
-}
-
 
 /* Секция с квадратными объявлениями */
 .listings-section {
@@ -1126,6 +1112,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.favorite-btn-small.active svg path {
+  stroke: red;
+  fill: red;
 }
 
 .favorite-btn-small:hover svg path {

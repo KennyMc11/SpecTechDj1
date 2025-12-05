@@ -1,0 +1,418 @@
+/* Страница объявления */
+.offer-main {
+    padding: 15px 0;
+    background-color: var(--light);
+}
+
+.offer-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* Левая колонка */
+.offer-left {
+    flex: 1;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offer-title {
+    font-size: 30px;
+    color: var(--dark);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.offer-main-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.offer-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 75px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail.active {
+    border-color: var(--primary);
+}
+
+.thumbnail:hover {
+    transform: scale(1.02);
+}
+
+.offer-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+    background: var(--light);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: var(--gray);
+}
+
+.offer-location i {
+    color: var(--secondary);
+    margin-top: 3px;
+}
+
+.offer-details {
+    margin-bottom: 30px;
+}
+
+.offer-details h2,
+.offer-description h2 {
+    font-size: 24px;
+    color: var(--dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.detail-value {
+    color: var(--gray);
+    margin-right: 50px;
+}
+
+.offer-description p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--gray);
+}
+
+/* Правая колонка */
+.offer-right {
+    flex: 0 0 350px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    height: fit-content;
+    max-height: calc(100vh - 100px);
+}
+
+.sticky-sidebar {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.offer-price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.offer-price {
+    display: flex;
+    align-items: baseline;
+}
+
+.price-amount {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.price-period {
+    font-size: 18px;
+    color: var(--gray);
+    margin-left: 5px;
+}
+
+.offer-favorite {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray);
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.offer-favorite:hover {
+    color: var(--primary);
+    background: rgba(255, 204, 0, 0.1);
+}
+
+.offer-owner {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.offer-owner h3 {
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.owner-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.owner-avatar img{
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.owner-details {
+    flex: 1;
+}
+
+.owner-name {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.owner-registration {
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 5px;
+}
+
+.offer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-book-large,
+.btn-message-large {
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-book-large {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+.btn-book-large:hover {
+    background: #ffdb4d;
+    transform: translateY(-1px);
+}
+
+.btn-message-large {
+    background: #5c5c5c;
+    color: #ffffff;
+}
+
+.btn-message-large:hover {
+    background: var(--dark);
+    transform: translateY(-1px);
+}
+
+.offer-additional {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.additional-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--gray);
+}
+
+.additional-item i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.offer-contact h3 {
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    background: var(--light);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--gray);
+}
+
+.contact-item i {
+    color: var(--secondary);
+    width: 20px;
+}
+
+/* Стили для модального окна */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+.close-modal {
+    position: absolute;
+    top: -50px;
+    right: -25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--primary);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background: rgba(237, 237, 237, 0.678);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Увеличение фото при наведении */
+.offer-main-image {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.offer-main-image:hover {
+    transform: scale(1.006);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .offer-container {
+        flex-direction: column;
+    }
+
+    .offer-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .sticky-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-title {
+        font-size: 24px;
+    }
+
+    .offer-main-image {
+        height: 300px;
+    }
+}
