@@ -739,7 +739,7 @@ body {
   font-size: 16px;
 }
 
-.filter-group label{
+.filter-group label {
   font-size: 14px;
 }
 
@@ -789,7 +789,7 @@ body {
   margin-right: 8px;
 }
 
-.btn_apply_filter{
+.btn_apply_filter {
   padding: 8px 12px;
   border: none;
   border-radius: 8px;
@@ -943,13 +943,13 @@ body {
 .ad-title {
   font-size: 18px;
   margin-bottom: 10px;
-  color: var(--secondary);
+  color: var(--dark);
 }
 
 .ad-price {
   font-size: 20px;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--dark);
   margin-bottom: 5px;
 }
 
@@ -990,8 +990,29 @@ body {
   gap: 5px;
 }
 
+
+
+.listing-rating {
+  margin-bottom: 8px;
+}
+
 .stars {
-  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-value {
+  margin-left: 8px;
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.reviews-count {
+  color: var(--gray);
+  font-size: 13px;
+  margin-left: 4px;
 }
 
 .reviews-count {
