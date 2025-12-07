@@ -70,21 +70,21 @@ function createStars(ratingElement) {
         if (rating >= i) {
             // Полная звезда
             star.innerHTML = `
-                <svg width="16" height="16" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="m10 14.99-4.92 3.26a.55.55 0 0 1-.83-.6l1.58-5.7L1.2 8.29a.55.55 0 0 1 .31-.98l5.9-.25 2.07-5.53a.55.55 0 0 1 1.02 0l2.07 5.53 5.9.25a.55.55 0 0 1 .31.98l-4.62 3.68 1.58 5.69a.55.55 0 0 1-.83.6z" 
                           fill="var(--primary)"/>
                 </svg>
             `;
         } else if (rating > i - 1) {
             // Половина звезды
             star.innerHTML = `
-        <svg width="16" height="16" viewBox="0 0 24 24">
+        <svg width="20" height="20" viewBox="0 0 20 20">
             <!-- Левая половина - желтая -->
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+            <path d="m10 14.99-4.92 3.26a.55.55 0 0 1-.83-.6l1.58-5.7L1.2 8.29a.55.55 0 0 1 .31-.98l5.9-.25 2.07-5.53a.55.55 0 0 1 1.02 0l2.07 5.53 5.9.25a.55.55 0 0 1 .31.98l-4.62 3.68 1.58 5.69a.55.55 0 0 1-.83.6z" 
                   fill="var(--primary)"
                   clip-path="inset(0 50% 0 0)"/>
             <!-- Правая половина - серая -->
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+            <path d="m10 14.99-4.92 3.26a.55.55 0 0 1-.83-.6l1.58-5.7L1.2 8.29a.55.55 0 0 1 .31-.98l5.9-.25 2.07-5.53a.55.55 0 0 1 1.02 0l2.07 5.53 5.9.25a.55.55 0 0 1 .31.98l-4.62 3.68 1.58 5.69a.55.55 0 0 1-.83.6z" 
                   fill="#ddd"
                   clip-path="inset(0 0 0 50%)"/>
         </svg>
@@ -92,8 +92,8 @@ function createStars(ratingElement) {
         } else {
             // Пустая звезда
             star.innerHTML = `
-                <svg width="16" height="16" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="m10 14.99-4.92 3.26a.55.55 0 0 1-.83-.6l1.58-5.7L1.2 8.29a.55.55 0 0 1 .31-.98l5.9-.25 2.07-5.53a.55.55 0 0 1 1.02 0l2.07 5.53 5.9.25a.55.55 0 0 1 .31.98l-4.62 3.68 1.58 5.69a.55.55 0 0 1-.83.6z" 
                           fill="#ddd"/>
                 </svg>
             `;
@@ -113,21 +113,31 @@ function createStars(ratingElement) {
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.listing-rating').forEach(createStars);
+    document.querySelectorAll('.stars-rating').forEach(createStars);
 });
 
 
 
 // Заливка Для маленьких сердечек
 document.querySelectorAll('.favorite-btn-small').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
         e.stopPropagation();
         this.classList.toggle('active');
-        
+
         // Анимация
         this.style.transform = 'scale(1.1)';
         setTimeout(() => {
             this.style.transform = 'scale(1)';
         }, 300);
+    });
+});
+
+
+// Модальное окно 
+document.querySelectorAll('.switch-form').forEach(button => {
+    button.addEventListener('click', function() {
+        const formToShow = this.dataset.form;
+        document.querySelector('.login-form').classList.toggle('active', formToShow === 'login');
+        document.querySelector('.register-form').classList.toggle('active', formToShow === 'register');
     });
 });

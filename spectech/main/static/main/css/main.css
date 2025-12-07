@@ -981,7 +981,7 @@ body {
 
 .owner-name {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .owner-rating {
@@ -992,14 +992,19 @@ body {
 
 
 
-.listing-rating {
-  margin-bottom: 8px;
+.stars-rating {
+  margin-bottom: 0px;
 }
 
 .stars {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
+}
+
+.star svg {
+  width: 16px;
+  height: 16px;
 }
 
 .rating-value {
@@ -1451,6 +1456,23 @@ body {
   z-index: 1000;
 }
 
+.modal-overlay-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
 .modal {
   background: #ffffff;
   border-radius: 12px;
@@ -1464,8 +1486,7 @@ body {
 }
 
 .modal-header {
-  background: #f7c900;
-  padding: 30px 20px;
+  background: var(--white);
   text-align: center;
   position: relative;
 }
@@ -1481,18 +1502,20 @@ body {
 .brand-name {
   font-size: 24px;
   font-weight: bold;
-  color: #1a1a1a;
+  color: var(--dark);
   text-transform: uppercase;
   letter-spacing: 2px;
+  padding: 10px 0 0 0;
+  margin-bottom: 20px;
 }
 
 .close-btn {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 15px;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 35px;
   cursor: pointer;
   color: #1a1a1a;
   width: 30px;
@@ -1509,11 +1532,11 @@ body {
 }
 
 .modal-body {
-  padding: 40px 30px;
+  padding: 0px 30px 30px 30px;
 }
 
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .form-group label {
@@ -1528,13 +1551,13 @@ body {
 
 .form-group input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 8px 16px;
   border: 2px solid #e0e0e0;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
   transition: all 0.3s ease;
   background: #f8f9fa;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .form-group input:focus {
@@ -1577,12 +1600,12 @@ body {
   background: #f7c900;
   color: #1a1a1a;
   border: none;
-  padding: 16px;
+  padding: 10px 16px;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1596,12 +1619,16 @@ body {
   text-align: center;
   margin-top: 25px;
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.login-link a {
-  color: #fecb00;
+.login-link button {
+  background: none;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
+  font-size: 16px;
+  color: #fecb00;
   font-weight: 600;
 }
 
@@ -1609,17 +1636,34 @@ body {
   text-decoration: underline;
 }
 
-/* Чекбокс для управления модальным окном */
-#modal-toggle {
-  display: none;
+.register-form {
+    display: none;
 }
 
-#modal-toggle:checked~.modal-overlay {
+.login-form.active ~ .register-form {
+    display: none;
+}
+
+.register-form.active {
+    display: block;
+}
+
+.login-form:not(.active) {
+    display: none;
+}
+
+/* Чекбокс для управления модальным окном */
+#authModalToggle {
+  display: none;
+  visibility:hidden;
+}
+
+#authModalToggle:checked~.modal-overlay {
   opacity: 1;
   visibility: visible;
 }
 
-#modal-toggle:checked~.modal-overlay .modal {
+#authModalToggle:checked~.modal-overlay .modal {
   transform: scale(1);
 }
 

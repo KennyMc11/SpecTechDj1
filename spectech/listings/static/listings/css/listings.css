@@ -104,7 +104,7 @@
 .detail-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 5px 0;
     border-bottom: 1px solid #eee;
 }
 
@@ -217,7 +217,7 @@
 .owner-name {
     font-weight: 600;
     color: var(--dark);
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .owner-registration {
@@ -235,7 +235,7 @@
 
 .btn-book-large,
 .btn-message-large {
-    padding: 16px;
+    padding: 8px 16px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
