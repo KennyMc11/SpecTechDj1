@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="brend">
+        <div class="logo">
+            <img src="/static/main/img/JCB-Logo.jpg" alt="СпецТехника">
+        </div>
+        <p>БРЕНД</p>
+    </div>
+    <div class="modal">
+        <div class="modal-body">
+            <form>
+                <div class="login-form">
+                    <!-- поля входа -->
+                    <div class="brand-logos">
+                        <!-- Здесь могут быть логотипы DeWalt и JCB -->
+                    </div>
+                    <div class="brand-name">Вход</div>
+                    <!-- Кнопка закрытия -->
+                    <label for="authModalToggle" class="close-btn">×</label>
+                    <div class="form-group">
+                        <label for="email">Телефон или Email</label>
+                        <input type="email" id="email" placeholder="" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" placeholder="Введите пароль" required>
+                    </div>
+
+                    <button type="submit" class="btn-register">Войти</button>
+
+                    <div class="login-link">
+                        Нет аккаунта? <button class="switch-form" data-form="register">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

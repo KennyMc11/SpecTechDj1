@@ -1439,50 +1439,17 @@ body {
 }
 
 /* Стили модального окна */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.modal-overlay-login {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
 
 .modal {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 440px;
+  max-width: 50%;
   overflow: hidden;
   border: 3px solid #f5f5f5;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
+  scale: 0.9;
+  margin: 50px auto;
 }
 
 .modal-header {
@@ -1636,35 +1603,8 @@ body {
   text-decoration: underline;
 }
 
-.register-form {
-    display: none;
-}
-
-.login-form.active ~ .register-form {
-    display: none;
-}
-
 .register-form.active {
     display: block;
-}
-
-.login-form:not(.active) {
-    display: none;
-}
-
-/* Чекбокс для управления модальным окном */
-#authModalToggle {
-  display: none;
-  visibility:hidden;
-}
-
-#authModalToggle:checked~.modal-overlay {
-  opacity: 1;
-  visibility: visible;
-}
-
-#authModalToggle:checked~.modal-overlay .modal {
-  transform: scale(1);
 }
 
 /* Адаптивность для мобильных */
